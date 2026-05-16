@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>毒鸡汤 · 名言生成器</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1 class="logo">🥣 人间清醒</h1>
+      <p class="subtitle">输入主题 · AI 为你写文案</p>
+    </header>
+
+    <div class="tabs" id="tabContainer">
+    </div>
+
+    <div class="theme-input-area" id="themeArea">
+      <div class="theme-input-wrapper">
+        <input type="text" id="themeInput" placeholder="输入主题，如：爱情、加班、减肥..." maxlength="15" autocomplete="off">
+        <button class="theme-clear" id="themeClear">✕</button>
+      </div>
+      <div class="theme-tags" id="themeTags">
+        <span class="theme-tag" data-theme="爱情">❤️ 爱情</span>
+        <span class="theme-tag" data-theme="加班">💼 加班</span>
+        <span class="theme-tag" data-theme="减肥">🏃 减肥</span>
+        <span class="theme-tag" data-theme="搞钱">💰 搞钱</span>
+        <span class="theme-tag" data-theme="内卷">📚 内卷</span>
+        <span class="theme-tag" data-theme="躺平">🛌 躺平</span>
+      </div>
+    </div>
+
+    <div class="card" id="quoteCard">
+      <div class="card-badge" id="badge">毒鸡汤</div>
+      <div class="quote-content" id="quoteContent">
+        <span class="quote-mark left">"</span>
+        <p id="quoteText">点击下方按钮，获取今日份清醒。</p>
+        <span class="quote-mark right">"</span>
+      </div>
+      <div class="loading-spinner" id="loadingSpinner"></div>
+    </div>
+
+    <div class="source-info" id="sourceInfo">📖 本地词库</div>
+
+    <div class="actions">
+      <button class="btn btn-primary" id="nextBtn">
+        <span class="btn-icon">🎲</span> 换一条
+      </button>
+      <button class="btn btn-secondary" id="copyBtn">
+        <span class="btn-icon">📋</span> 复制
+      </button>
+    </div>
+
+    <div class="toast" id="toast">已复制到剪贴板</div>
+
+    <footer>
+      <p>生活已经这么难了，不如笑着面对 🍻</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
